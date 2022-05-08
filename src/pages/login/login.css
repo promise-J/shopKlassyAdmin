@@ -1,0 +1,44 @@
+.login{
+    /* background: black; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginWrapper{
+    height: 50%;
+    width: 50%;
+    /* background-color: white; */
+}
+
+.login h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.login form{
+    /* background-color: purple; */
+    height: 50%;
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.login form input, .login form button{
+    width: 80%;
+    padding: 4px;
+}
+
+.login form button{
+    background-color: aqua;
+    outline: none;
+    border: 1px rgb(163, 162, 162) solid;
+    font-weight: 100;
+}

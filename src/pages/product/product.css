@@ -1,0 +1,106 @@
+.product{
+    flex: 3;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productWrapper{
+    /* background-color: red; */
+    height: 90%;
+    width: 90%;
+    display: flex;
+
+}
+
+.productLeft{
+    flex: 1;
+    /* background-color: purple; */
+    /* border-right: 1px solid rgb(192, 187, 187); */
+}
+.productLeft h4, .productRight h4{
+    text-align: center;
+    font-size: 28px;
+    opacity: .5;
+    font-weight: 100;
+    margin-top: 9px;
+}
+
+.productLeft .divLeftInfos, .productRight .divRightInfos{
+    /* background-color: red; */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productLeft .divLeftInfos .divLeftInfo{
+    /* background-color: blue; */
+    width: 90%;
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productLeft .divLeftInfos .divLeftInfo img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.productLeft .divLeftInfos .divLeftInfo span:nth-child(1){
+    color: blue;
+    font-weight: 600;
+}
+.productLeft .divLeftInfos .divLeftInfo span:nth-child(2){
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.productRight{
+    flex: 1;
+    /* border-left: 1px solid rgb(192, 187, 187); */
+    /* background-color: peru; */
+}
+
+.productRight .divRightInfos{
+    /* background-color: red; */
+    width: 100%;
+}
+
+.productRight .divRightInfo{
+    /* background-color: blue; */
+    width: 95%;
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.productRight .divRightInfo input, .productRight .divRightInfo select{
+    padding: 2px;
+}
+
+.productRight .divRightInfo img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+.productRight .divRightInfo button{
+    background-color: green;
+    outline: none;
+    padding: 5px 0;
+    border: none;
+    color: white;
+    transition: all ease-in .2s;
+    cursor: pointer;
+}
+.productRight .divRightInfo button:hover{
+    background-color: rgb(5, 170, 5);
+}
+
+
+

@@ -1,0 +1,21 @@
+.users{
+    flex: 3;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usersWrapper{
+    /* background-color: white; */
+    height: 80%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.usersWrapper h2{
+    font-weight: 100;
+}

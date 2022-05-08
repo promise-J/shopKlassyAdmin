@@ -1,0 +1,106 @@
+.user{
+    flex: 3;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userWrapper{
+    /* background-color: red; */
+    height: 90%;
+    width: 90%;
+    display: flex;
+
+}
+
+.userLeft{
+    flex: 1;
+    /* background-color: purple; */
+    /* border-right: 1px solid rgb(192, 187, 187); */
+}
+.userLeft h4, .userRight h4{
+    text-align: center;
+    font-size: 28px;
+    opacity: .5;
+    font-weight: 100;
+    margin-top: 9px;
+}
+
+.userLeft .divLeftInfos, .userRight .divRightInfos{
+    /* background-color: red; */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userLeft .divLeftInfos .divLeftInfo{
+    /* background-color: blue; */
+    width: 90%;
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.userLeft .divLeftInfos .divLeftInfo img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.userLeft .divLeftInfos .divLeftInfo span:nth-child(1){
+    color: blue;
+    font-weight: 600;
+}
+.userLeft .divLeftInfos .divLeftInfo span:nth-child(2){
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.userRight{
+    flex: 1;
+    /* border-left: 1px solid rgb(192, 187, 187); */
+    /* background-color: peru; */
+}
+
+.userRight .divRightInfos{
+    /* background-color: red; */
+    width: 100%;
+}
+
+.userRight .divRightInfo{
+    /* background-color: blue; */
+    width: 95%;
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.userRight .divRightInfo input, .userRight .divRightInfo select{
+    padding: 2px;
+}
+
+.userRight .divRightInfo img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+.userRight .divRightInfo button{
+    background-color: green;
+    outline: none;
+    padding: 5px 0;
+    border: none;
+    color: white;
+    transition: all ease-in .2s;
+    cursor: pointer;
+}
+.userRight .divRightInfo button:hover{
+    background-color: rgb(5, 170, 5);
+}
+
+
+

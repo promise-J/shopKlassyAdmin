@@ -1,0 +1,63 @@
+.newProduct{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newProductWrapper{
+    /* background-color: blue; */
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newProductForm{
+    /* background-color: red; */
+    height: 90%;
+    width: 70%;
+}
+.newProductForm .formItems{
+    background-color: white;
+    width: 94%;
+    height: 94%;
+    margin: auto;
+    padding: 5px 14px;
+    flex-wrap: wrap;
+    position: relative;
+}
+.newProductForm .formItems input, .newProductForm .formItems button, .newProductForm .formItems div{
+    width: 45%;
+    padding: 6px;
+    margin: 12px 5px;
+}
+.newProductForm .formItems img{
+    border: 1px solid rgb(223, 218, 218);
+    object-fit: contain;
+    height: 30%;
+    width: 30%;
+    border-radius: 10px;
+}
+.newProductForm .formItems button{
+    background-color: rgb(11, 143, 11);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    transition: all ease-in 0.2s;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.newProductForm .formItems button:hover{
+    background-color: rgb(57, 180, 57);
+}
+.newProductForm h4{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 29px;
+}

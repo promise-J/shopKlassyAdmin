@@ -12,6 +12,9 @@ import { Link } from 'react-router-dom';
 const Users = () => {
   const [users, setUsers] = useState([])
 
+  const handleDelete = (e)=>{
+    // setUsers(users.filter(user=> user.id!== e.id))
+  }
 
   const columns = useMemo(
     () => [
@@ -36,13 +39,16 @@ const Users = () => {
         accessor: (originalRow, rowIndex) => (
            <div style={{display: 'flex', justifyContent: 'space-around'}}>
                <Link to={`/user/${originalRow.id}`} className='link'><button style={{border: 'none', padding: '0 3px', cursor: 'pointer'}} onClick={() => handleEdit(originalRow)}><BiEditAlt /></button></Link>
-               <button style={{border: 'none', padding: '0 3px', cursor: 'pointer'}} onClick={() => handleDelete(originalRow)}><MdDeleteOutline /></button>
+               {/* <button style={{border: 'none', padding: '0 3px', cursor: 'pointer'}} onClick={() => handleDelete(originalRow)}><MdDeleteOutline /></button> */}
+               <button style={{border: 'none', padding: '0 3px', cursor: 'pointer'}} onClick={(originalRow) => {
+                 setUsers(users.filter(user=> user.id !== originalRow.id))
+               }}><MdDeleteOutline /></button>
            </div>
         ),
         id: 'action',
       },
     ],
-    []
+    [users]
   )
 
 
@@ -60,9 +66,7 @@ const Users = () => {
 
   }
 
-  const handleDelete = (e)=>{
-
-  }
+  
 
 
 

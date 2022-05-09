@@ -12,10 +12,9 @@ import { Link } from 'react-router-dom';
 const Products = () => {
   const [products, setProducts] = useState([])
 
-  const handleDelete = async(e)=>{
-    console.log(e)
-
-  }
+  // const handleDelete = async(e)=>{
+  //   setProducts(products.filter(product=> product.id !== e))
+  // }
   const handleEdit = async(e)=>{
     
   }
@@ -66,9 +65,13 @@ const Products = () => {
     []
   )
 
+  const handleDelete = (e)=>{
+    
+  }
 
   // const tableInstance = useTable({ columns, data })
 
+  
   useEffect(() => {
     const getProducts = async () => {
       const res = await publicRequest.get('/product')

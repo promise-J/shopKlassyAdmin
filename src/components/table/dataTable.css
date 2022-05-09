@@ -27,7 +27,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: purple;
+    background-color: #800080;
     color: white;
   }
 
@@ -35,4 +35,18 @@ table tbody tr td{
   /* background-color: blue; */
   color: blue;
   font-size: 13px;
+}
+
+.pagination{
+  /* background: green; */
+  margin-top: 10px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.pagination button{
+  height: 25px;
+  width: 25px;
 }

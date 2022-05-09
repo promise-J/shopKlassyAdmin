@@ -40,9 +40,22 @@
 }
 
 .sidebarList.active{
-    background-color: rgb(244, 234, 247);
+    background-color: purple;
+    color: white;
 }
 
 .sidebarLists li:hover{
-    background-color: rgb(244, 234, 247);
+    background-color: purple;
+    color: white;
+}
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 674px) {
+    .sidebar{
+        display: none;
+    }
 }

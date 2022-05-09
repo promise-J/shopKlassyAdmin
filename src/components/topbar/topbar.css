@@ -1,0 +1,96 @@
+.topbar{
+    z-index: 44;
+    height: 40px;
+    border-bottom: 1px solid rgb(223, 219, 219);
+    display: flex;
+}
+
+.topbarLeft, .topbarRight{
+    flex: 1;
+}
+
+.topbarLeft{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: cursive;
+}
+.topbarRight{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menuList{
+    background-color: white;
+    height: 100vh;
+    width: 97vw;
+    z-index: 50;
+    position: absolute;
+    transition: all .4s ease-in;
+    transform: translateX(-150vw);
+    /* transform: translateX(0); */
+}
+
+.menuListWrapper{
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.menuListWrapper h2{
+    margin-left: 40px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.menuListContent{
+    /* background-color: aqua; */
+    height: 90%;
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.profileMenu{
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(230, 224, 224);
+    color: white;
+}
+
+.profileMenu img{
+    height: 82px;
+    width: 82px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.profileContent{
+    flex: 3;
+}
+
+.profileContent ul{
+    /* background-color: red; */
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 90%;
+}
+
+
+
+
+
+

@@ -20,6 +20,7 @@ import Register from './pages/register/Register'
 import NotFound from './pages/NotFound'
 import LoadingImg from './images/loadingGIF.gif'
 import User from './pages/user/User'
+import Topbar from './components/topbar/Topbar'
 
 
 
@@ -56,11 +57,12 @@ function App() {
   return (
     <div className="App">
         <Router>
+          <Topbar />
         <Routes>
           <Route path='/' element={isLogged ? <Navigate to='/dashboard' /> : <Login />} caseSensitive={false} exact />
           <Route path='/dashboard' element={<Homepage />} caseSensitive={false} exact />
-          <Route path='/login' element={currentUser ? <Navigate to='/dashboard' /> : <Login />} exact />
-          <Route path='/register' element={currentUser ? <Navigate to='/dashboard' /> : <Register />} exact />
+          <Route path='/login' element={isLogged ? <Navigate to='/dashboard' /> : <Login />} exact />
+          <Route path='/register' element={isLogged ? <Navigate to='/dashboard' /> : <Register />} exact />
           <Route path='/orders' element={<ProtectedRoute isLogged={isLogged}><Orders /></ProtectedRoute>} exact />
           <Route path='/newProduct' element={<ProtectedRoute isLogged={isLogged}><NewProduct /></ProtectedRoute>} exact />
           <Route path='/newUser' element={<ProtectedRoute isLogged={isLogged}><NewUser /></ProtectedRoute>} exact />

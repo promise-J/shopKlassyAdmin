@@ -90,7 +90,7 @@
     object-fit: cover;
 }
 .productRight .divRightInfo button{
-    background-color: green;
+    background-color: purple;
     outline: none;
     padding: 5px 0;
     border: none;
@@ -99,7 +99,7 @@
     cursor: pointer;
 }
 .productRight .divRightInfo button:hover{
-    background-color: rgb(5, 170, 5);
+    background-color: rgb(146, 5, 146);
 }
 
 

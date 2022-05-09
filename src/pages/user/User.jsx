@@ -132,7 +132,7 @@ const User = () => {
             <div className="divLeftInfos">
               <div className="divLeftInfo">
                 <span>ID</span>
-                <span>{initialUser?.id}</span>
+                <span>{id}</span>
               </div>
               <div className="divLeftInfo">
                 <span>Username</span>
@@ -161,7 +161,10 @@ const User = () => {
               <h4>Edit Here</h4>
               <form className="divRightInfos" onSubmit={handleSubmit}>
                 <div className="divRightInfo">
-                  <span><span style={{ fontWeight: 600 }}>ID: </span>{user?.id}</span>
+                  {imgErr && <span style={{color: 'red', fontStyle: 'italic', fontSize: 13, fontWeight: 600}}>Error here</span>}
+                </div>
+                <div className="divRightInfo">
+                  <span><span style={{ fontWeight: 600 }}>ID: </span>{id}</span>
                 </div>
                 <div className="divRightInfo">
                   <span>Username</span>

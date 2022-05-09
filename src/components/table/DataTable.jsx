@@ -2,16 +2,14 @@ import React from 'react'
 import { useTable, usePagination } from 'react-table'
 import './dataTable.css'
  
- function DataTable({ products, productColumns }) {
+ function DataTable({ products, productColumns, loading }) {
    const data = React.useMemo(
      () => products,
-     [products]
-   )
+     [products])
  
    const columns = React.useMemo(
      () => productColumns,
-     [productColumns]
-   )
+     [productColumns])
 
 
    const {
@@ -30,8 +28,10 @@ import './dataTable.css'
     gotoPage,
     nextPage,
     previousPage,
-    setPageSize,
-    state: { pageIndex, pageSize },
+    // setPageSize,
+    state: { pageIndex,
+      //  pageSize
+       },
   } = useTable(
     {
       columns,
@@ -48,9 +48,13 @@ import './dataTable.css'
   //    rows,
   //    prepareRow,
   //  } = useTable({ columns, data }, useSortBy)
+
  
-   if(data.length < 1){
+   if(loading){
      return <h1 style={{opacity: .4}}>Please Wait!</h1>
+   }
+   if(data.length < 1){
+     return <h1 style={{opacity: .4}}>Opps! There is no Record!</h1>
    }
    return (
      <div className='data-table'>

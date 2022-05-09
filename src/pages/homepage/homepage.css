@@ -20,6 +20,8 @@
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
 }
 
 .topSideBox{
@@ -31,27 +33,28 @@
     transition: all ease-in 0.2;
     cursor: pointer;
 }
-.topSideBox:hover{
+/* .topSideBox:hover{
     background-color: rgb(85, 80, 80);
     color: white;
-}
-.topSideBox:hover h4{
+} */
+/* .topSideBox:hover h4{
     transform: translateX(20px) scale(0.8);
-}
+} */
 .topSideBox h1{
     text-align: center;
     font-weight: 2;
+    font-size: 20px;
 }
 .topSideBox h4{
     font-size: 45px;
     margin-left: 6px;
     font-weight: 100;
-    border: 1px solid rgb(216, 211, 211);
+    /* border: 1px solid rgb(216, 211, 211); */
     width: fit-content;
     height: fit-content;
     transition: all ease-in 0.5s;
     padding: 5px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .bottomSide h1{
@@ -64,3 +67,20 @@
 
 
 
+/* Medial Queries */
+@media screen and (max-width: 674px){
+    .topSide{
+       flex-direction: column;
+    }
+    .topSideBox{
+        flex: 0.3;
+    }
+    .topSideBox h1{
+        font-size: 24px;
+        text-align: center;
+    }
+    .topSideBox h4{
+        font-size: 24px;
+        margin: auto;
+    }
+}

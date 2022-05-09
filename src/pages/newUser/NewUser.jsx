@@ -46,11 +46,12 @@ const NewUser = () => {
         let formData = new FormData()
         formData.append('file', img)
         if(img){
+            const registerUser = async()=>{
             setImgLoad(true)
             const res = await publicRequest.post('/api/upload_avatar', formData)
             console.log(res.data)
             if(res.status===200){
-                const response = await publicRequest.post('/auth/register', {
+                await publicRequest.post('/auth/register', {
                   password: 'password',
                   username,
                   email,
@@ -58,26 +59,24 @@ const NewUser = () => {
                   img: res.data.secure_url,
                   publicId: res.data.public_id,
                 })
-                console.log(response.data)
                 // setData({...data, img: null})
 
-                setImgPrev('')
-                setImgLoad(false)
-                setData({...initialState})
+                // setImgPrev('')
+                // setImgLoad(false)
+                // setData({...initialState})
                 navigate('/users')
             }
             setData({...initialState})
+          }
+          return registerUser()
         }
-        return setImgErr('Please select an image')
-        // else{
-        //     setImgLoad(true)
-        //     await publicRequest.post('/auth/register', {...data})
-        //     // console.log(res)
-        //     setImgLoad(false)
-        //     setData({...initialState})
-        // }
-        // return navigate('/users')
-        // console.log(data)
+        await publicRequest.post('/auth/register', {
+          password: 'password',
+          username,
+          email,
+          status
+        })
+        navigate('/users')
     } catch (error) {
             // setData({...initialState})
             console.log(error)

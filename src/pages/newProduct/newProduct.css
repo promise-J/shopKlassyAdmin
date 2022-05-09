@@ -25,6 +25,7 @@
     height: 94%;
     margin: auto;
     padding: 5px 14px;
+    /* display: flex; */
     flex-wrap: wrap;
     position: relative;
 }
@@ -41,7 +42,7 @@
     border-radius: 10px;
 }
 .newProductForm .formItems button{
-    background-color: rgb(11, 143, 11);
+    background-color: purple;
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -51,13 +52,35 @@
     transition: all ease-in 0.2s;
     margin-left: 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .newProductForm .formItems button:hover{
-    background-color: rgb(57, 180, 57);
+    background-color: rgb(150, 4, 150);
 }
 .newProductForm h4{
     text-align: center;
     margin-top: 10px;
     font-weight: 100;
     font-size: 29px;
+}
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 674px){
+    .newProduct{
+        flex: 1;
+        /* background-color: blue; */
+    }
+    .newProductWrapper{
+        width: 100%;
+    }
+    .newProductForm{
+        width: 96%;
+    }
+    .newProductForm .formItems input, .newProductForm .formItems button, .newProductForm .formItems div{
+        width: 90%;
+    }
 }

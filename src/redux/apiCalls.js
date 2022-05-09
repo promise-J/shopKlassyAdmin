@@ -40,12 +40,13 @@ export const register = async(dipatch, user)=>{
     }
 }
 
-export const logout = async(dispatch)=>{
+export const logout = async(dispatch, navigate)=>{
     dispatch(logoutStart())
     try {
         await publicRequest.get("/auth/logout")
         cookie.remove('shopKlassToken')
         dispatch(logoutSuccess())
+        navigate('/login')
     } catch (error) {
         dispatch(logoutFailure())
     }

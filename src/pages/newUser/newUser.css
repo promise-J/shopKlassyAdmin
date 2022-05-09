@@ -41,7 +41,7 @@
     border-radius: 10px;
 }
 .newUserForm .formItems button{
-    background-color: rgb(11, 143, 11);
+    background-color: purple;
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -51,9 +51,10 @@
     transition: all ease-in 0.2s;
     margin-left: 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .newUserForm .formItems button:hover{
-    background-color: rgb(57, 180, 57);
+    background-color: rgb(153, 5, 153);
 }
 .newUserForm h4{
     text-align: center;
@@ -61,3 +62,31 @@
     font-weight: 100;
     font-size: 29px;
 }
+
+
+/* Media Queries */
+@media screen and (max-width: 674px){
+    .newUser{
+        flex: 1;
+    }
+    .newUserWrapper{
+        width: 95%;
+    }
+    .newUserForm{
+        width: 90%;
+    }
+    .newUserForm .formItems{
+        /* background-color: blue; */
+        width: 96%;
+    }
+    .newUserForm .formItems input, .newUserForm .formItems button, .newUserForm .formItems div{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
